@@ -48,18 +48,18 @@
 		</tr>
 	</table>
 	<div id="recuadro"></div>
-    <script>
-      // Función para obtener el día actual y mostrarlo en el recuadro
-      function mostrarDiaHoy() {
-        const fechaActual = new Date();
-        const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
-        const diaHoy = diasSemana[fechaActual.getDay()];
-        const recuadro = document.getElementById("recuadro");
-        recuadro.innerHTML = `Hoy es ${diaHoy}`;
-      }
-      
-      // Llamar a la función cuando la página se cargue
-      window.onload = mostrarDiaHoy;
-    </script>
+	<script>
+		// Función para obtener el día actual y mostrarlo en el recuadro
+		function mostrarDiaHoy() {
+		  const fechaActual = new Date();
+		  const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+		  const diaHoy = diasSemana[fechaActual.getDay()];
+		  const recuadro = document.getElementById("recuadro");
+		  recuadro.innerHTML = `Hoy es ${diaHoy}`;
+		}
+		
+		// Llamar a la función cuando la página se cargue
+		window.onload = mostrarDiaHoy;
+	  </script>
 </body>
 </html>
