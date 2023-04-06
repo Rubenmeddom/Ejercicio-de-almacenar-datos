@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=" stylesheet" href="style.css">
+	<style>
+      /* Estilo del recuadro */
+      #recuadro {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    </style>
 	<title>Mi tabla personal</title>
 </head>
 <body>
@@ -37,5 +47,26 @@
 			<td><textarea name="comentario" rows="4" cols="50"></textarea></td>
 		</tr>
 	</table>
+	<div id="recuadro"></div>
+	<script>
+		// Función para obtener el día actual y mostrarlo en el recuadro
+		function mostrarDiaHoy() {
+  		// Crear un objeto de fecha para obtener el día y número actual
+  		const fechaActual = new Date();
+  		const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+  		const diaHoy = diasSemana[fechaActual.getDay()];
+  		const numeroDia = fechaActual.getDate();
+
+  		// Crear un elemento de mensaje en HTML
+  		const mensaje = document.createElement("p");
+  		mensaje.innerHTML = `Hoy es ${diaHoy}, ${numeroDia}`;
+
+  		// Agregar el mensaje al cuerpo del documento HTML
+  		document.body.appendChild(mensaje);
+}
+
+// Llamar a la función para mostrar el mensaje en la página
+mostrarDiaHoy();
+	  </script>
 </body>
 </html>
