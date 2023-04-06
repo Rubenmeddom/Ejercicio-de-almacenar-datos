@@ -56,17 +56,15 @@
   		const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
   		const diaHoy = diasSemana[fechaActual.getDay()];
   		const numeroDia = fechaActual.getDate();
-
-  		// Crear un elemento de mensaje en HTML
-  		const mensaje = document.createElement("p");
-  		mensaje.innerHTML = `Hoy es ${diaHoy}, ${numeroDia}`;
+		  const recuadro = document.getElementById("recuadro");
+        recuadro.innerHTML = `Hoy es ${diaHoy}, ${numeroDia}`;
 
   		// Agregar el mensaje al cuerpo del documento HTML
   		document.body.appendChild(mensaje);
 }
 
-// Llamar a la función para mostrar el mensaje en la página
-mostrarDiaHoy();
+ // Llamar a la función cuando la página se cargue
+ window.onload = mostrarDiaHoy;
 	  </script>
 </body>
 </html>
